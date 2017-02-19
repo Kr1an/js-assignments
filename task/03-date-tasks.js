@@ -37,7 +37,7 @@ function parseDataFromRfc2822(value) {
  *    '2016-01-19T08:07:37Z' => Date()
  */
 function parseDataFromIso8601(value) {
-   return new Date(value);
+   return new Date(Date.parse(value));
 }
 
 
@@ -121,7 +121,7 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    let h = date.getHours()+21;
+    let h = date.getHours();
     h %= 24;
     h %= 12;
     let m = date.getMinutes();
