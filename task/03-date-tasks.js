@@ -132,6 +132,8 @@ function angleBetweenClockHands(date) {
         angle -= 180;
 
     let angleInRadian = angle*Math.PI;
+    console.log(h);
+    console.log(m);
     return angleInRadian/180;
 
 
